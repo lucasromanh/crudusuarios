@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        .inicio {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .carta {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+        }
+
+        .metalico {
+            background-color: #c0c0c0;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            background-color: #ffffff;
+            border-bottom: none;
+            padding: 10px 15px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-text {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">CODO a CODO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./usuarios.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nuevo_usuario.html">Agregar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nosotros.html">Grupo 14</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="app">
+        <main>
+            <div class="inicio" :style="backgroundStyle">
+                <div class="container">
+                    <h1 class="titulo">TRABAJO FINAL INTEGRADOR - 2023</h1>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <div class="card carta w-50">
+                                <div class="card-header">
+                                    <h5 class="card-title">Lucas Roman</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Salta</p>
+                                    <p class="card-text">3874404472</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <div class="card carta w-50">
+                                <div class="card-header">
+                                    <h5 class="card-title">Jorge Rios</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Buenos Aires</p>
+                                    <p class="card-text">11 5990-7483</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <div class="card carta w-50">
+                                <div class="card-header">
+                                    <h5 class="card-title">Mauricio Gutierrez</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Santa Fe</p>
+                                    <p class="card-text">342 438-0832</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <div class="card carta w-50">
+                                <div class="card-header">
+                                    <h5 class="card-title">Angela Saturnino</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Buenos Aires - GBA</p>
+                                    <p class="card-text">11 3428-4790</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+  
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            computed: {
+                backgroundStyle() {
+                    return {
+                        background: 'linear-gradient(to bottom, #ffcc00, #ff9900)',
+                    };
+                },
+            },
+        });
+    </script>
+
+    
+</body>
+
+</html>
