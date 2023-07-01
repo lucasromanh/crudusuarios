@@ -12,7 +12,7 @@ app = Flask(__name__)
 CORS(app)
 
 # CONFIGURACIÓN A LA BASE DE DATOS DESDE app
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:micram123@localhost:3306/crudflask'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:micram123@localhost/crudflask'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # COMUNICAR LA APP CON SQLALCHEMY
@@ -23,8 +23,8 @@ ma = Marshmallow(app)
 
 
 # ESTRUCTURA DE LA TABLA usuarios A PARTIR DE LA CLASE
-class Usuario(db.Model):
-    id = db.Column(db.Integer, primary_key=True,)
+class Usuarios(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     nombre_completo = db.Column(db.String(100))
     telefono = db.Column(db.String(20))
     email = db.Column(db.String(100))
@@ -34,10 +34,6 @@ class Usuario(db.Model):
         self.telefono = telefono
         self.email = email
 
-
-# CÓDIGO PARA CREAR LAS TABLAS DEFINIDAS EN LAS CLASES
-with app.app_context():
-    db.create_all()
 
 # CREAR UNA CLASE UsuarioSchema, DONDE SE DEFINEN LOS CAMPOS DE LA TABLA
 class UsuarioSchema(ma.Schema):
@@ -50,9 +46,10 @@ usuario_schema = UsuarioSchema()
 usuarios_schema = UsuarioSchema(many=True)
 
 
+
 @app.route('/usuarios', methods=['GET'])
 def get_usuarios():
-    usuarios = Usuario.query.all()
+    usuarios = Usuarios.query.all()
     print(usuarios)
     return usuarios_schema.jsonify(usuarios)
 
@@ -63,7 +60,7 @@ def add_usuario():
     telefono = request.json['telefono']
     email = request.json['email']
     try:
-        new_usuario = Usuario(nombre_completo, telefono, email)
+        new_usuario = Usuarios(nombre_completo, telefono, email)
         db.session.add(new_usuario)
         db.session.commit()
         return jsonify({'id': new_usuario.id, 'message': 'Usuario agregado correctamente'})
@@ -73,7 +70,7 @@ def add_usuario():
 
 @app.route('/usuarios/<int:id>', methods=['GET'])
 def get_usuario(id):
-    usuario = Usuario.query.get(id)
+    usuario = Usuarios.query.get(id)
     if usuario:
         return usuario_schema.jsonify(usuario)
     else:
@@ -82,7 +79,7 @@ def get_usuario(id):
 
 @app.route('/usuarios/<int:id>', methods=['PUT'])
 def update_usuario(id):
-    usuario = Usuario.query.get(id)
+    usuario = Usuarios.query.get(id)
     if usuario:
         nombre_completo = request.json.get('nombre_completo')
         telefono = request.json.get('telefono')
@@ -98,7 +95,7 @@ def update_usuario(id):
 
 @app.route('/usuarios/<int:id>', methods=['DELETE'])
 def delete_usuario(id):
-    usuario = Usuario.query.get(id)
+    usuario = Usuarios.query.get(id)
     if usuario:
         db.session.delete(usuario)
         db.session.commit()

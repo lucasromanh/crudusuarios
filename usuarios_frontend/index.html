@@ -15,35 +15,13 @@
         body {
             background: linear-gradient(to bottom, #ffcc00, #ff9900);
         }
-
-        #header {
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 15px;
+        
+        .navbar {
+            background-color: transparent !important;
         }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 32px;
-            font-weight: bold;
-        }
-
-        table {
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        th,
-        td {
-            text-align: center;
-            padding: 10px;
-        }
-
-        footer {
-            background-color: #f8f9fa;
-            padding: 15px;
-            text-align: center;
+        .form-control {
+            background-color: transparent;
         }
     </style>
 </head>
@@ -70,22 +48,12 @@
             </div>
         </nav>
     </header>
-    <main class="container mt-4">
-        <h1>Listado de Usuarios</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre Completo</th>
-                    <th>Teléfono</th>
-                    <th>Email</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="user-list">
-                <!-- Los usuarios se cargarán dinámicamente aquí -->
-            </tbody>
-        </table>
+    <main>
+        <div class="container d-flex justify-content-center align-items-center vh-100">
+            <form style="width: 400px; padding: 20px;">
+                <h1 class="text-center">CRUD Final de Codo a Codo</h1>
+            </form>
+        </div>
     </main>
     <footer>
         <!-- Coloca el pie de página aquí -->
