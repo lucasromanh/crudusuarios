@@ -9,7 +9,7 @@ function guardar() {
       email: email
     };
   
-    let url = "http://localhost:5000/usuarios";
+    let url = "https://lucasromanh.pythonanywhere.com/usuarios";
     var options = {
       body: JSON.stringify(usuario),
       method: 'POST',

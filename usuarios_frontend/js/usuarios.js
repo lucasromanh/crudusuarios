@@ -3,7 +3,7 @@ const { createApp } = Vue;
         createApp({
             data() {
                 return {
-                    url: "http://localhost:5000/usuarios",
+                    url: "https://lucasromanh.pythonanywhere.com/usuarios",
                     usuarios: [],
                     error: false,
                     cargando: true
@@ -28,7 +28,7 @@ const { createApp } = Vue;
                 },
                 eliminar(usuarioId) {
                   if (confirm("¿Estás segurisisisismo de que queres eliminar este usuario?")) {
-                    const url = 'http://localhost:5000/usuarios/' + usuarioId;
+                    const url = 'https://lucasromanh.pythonanywhere.com/usuarios/' + usuarioId;
                     var options = {
                       method: 'DELETE',
                     };

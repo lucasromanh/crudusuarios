@@ -27,7 +27,7 @@ function modificar() {
     email: email
   };
 
-  let url = "http://localhost:5000/usuarios/" + id;
+  let url = "https://lucasromanh.pythonanywhere.com/usuarios/" + id;
   var options = {
     body: JSON.stringify(usuario),
     method: 'PUT',
