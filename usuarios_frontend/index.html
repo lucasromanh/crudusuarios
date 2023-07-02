@@ -3,11 +3,9 @@
 
 <head>
     <title>CRUD de Usuarios</title>
-    <!-- Required meta tags -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
@@ -23,6 +21,28 @@
         .form-control {
             background-color: transparent;
         }
+
+        .neon-text {
+            color: rgb(112, 84, 47);
+            font-size: 50px;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            animation: neon-animation 2s ease-in-out infinite alternate, glitch-animation 0.5s infinite;
+        }
+
+        @keyframes neon-animation {
+            0%, 100% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffcc00, 0 0 70px #ffcc00,
+                    0 0 80px #ffcc00, 0 0 100px #ffcc00, 0 0 150px #ffcc00;
+            }
+
+            50% {
+                text-shadow: none;
+            }
+        }
+
     </style>
 </head>
 
@@ -51,14 +71,15 @@
     <main>
         <div class="container d-flex justify-content-center align-items-center vh-100">
             <form style="width: 400px; padding: 20px;">
-                <h1 class="text-center">CRUD Final de Codo a Codo</h1>
+                <h1 class="neon-text" >CRUD Final Codo a Codo</h1>
             </form>
         </div>
     </main>
     <footer>
-        <!-- Coloca el pie de página aquí -->
+        <div class="container">
+          <p class="text-center">&copy; 2023 CODO a CODO - Grupo 14</p>
+        </div>
     </footer>
-    <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>

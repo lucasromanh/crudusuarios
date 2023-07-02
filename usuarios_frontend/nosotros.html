@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         .inicio {
             height: 100vh;
@@ -20,6 +21,13 @@
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 20px;
+        }
+        body {
+            background: linear-gradient(to bottom, #ffcc00, #ff9900);
+        }
+        
+        .navbar {
+            background-color: transparent !important;
         }
 
         .carta {
@@ -59,111 +67,148 @@
             font-size: 14px;
             margin-bottom: 5px;
         }
+        .transparent-button {
+            background-color: transparent;
+            color: inherit;
+            border: none;
+            outline: none;
+            transition: color 0.3s;
+        }
+
+        .transparent-button:hover {
+            color: white;
+        }
+
+        .transparent-button[href="mailto:example@gmail.com"]:hover {
+            color: red;
+        }
     </style>
 </head>
 
 <body>
     <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">CODO a CODO</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                    aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">CRUD de Usuarios</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./usuarios.html">Inicio</a>
+                            <a class="nav-link" href="usuarios.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./nuevo_usuario.html">Agregar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./nosotros.html">Grupo 14</a>
+                            <a class="nav-link" href="nuevo_usuario.html">Crear Usuario</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div id="app">
-        <main>
+    <main>
+        <div id="app">
             <div class="inicio" :style="backgroundStyle">
                 <div class="container">
-                    <h1 class="titulo">TRABAJO FINAL INTEGRADOR - 2023</h1>
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 d-flex justify-content-center">
-                            <div class="card carta w-50">
-                                <div class="card-header">
-                                    <h5 class="card-title">Lucas Roman</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Salta</p>
-                                    <p class="card-text">3874404472</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 d-flex justify-content-center">
-                            <div class="card carta w-50">
-                                <div class="card-header">
-                                    <h5 class="card-title">Jorge Rios</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Buenos Aires</p>
-                                    <p class="card-text">11 5990-7483</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 d-flex justify-content-center">
-                            <div class="card carta w-50">
-                                <div class="card-header">
-                                    <h5 class="card-title">Mauricio Gutierrez</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Santa Fe</p>
-                                    <p class="card-text">342 438-0832</p>
+                    <div class="row">
+                        <h1 class="titulo">TRABAJO FINAL INTEGRADOR - 2023</h1>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <div class="row">
+                                    <div class="card carta w-100">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Lucas Roman</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Salta</p>
+                                            <p class="card-text">3874404472</p>
+                                            <a href="https://github.com/lucasromanh" class="btn btn-primary transparent-button">
+                                                <i class="fab fa-github"></i> GitHub
+                                            </a>
+                                            <a href="mailto:lucasromanh@gmail.com" class="btn btn-primary transparent-button">
+                                                <i class="far fa-envelope"></i> Correo electrónico
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 d-flex justify-content-center">
-                            <div class="card carta w-50">
-                                <div class="card-header">
-                                    <h5 class="card-title">Angela Saturnino</h5>
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <div class="row">
+                                    <div class="card carta w-100">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Jorge Rios</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Buenos Aires</p>
+                                            <p class="card-text">11 5990-7483</p>
+                                            <a href="https://github.com/jorgerios88" class="btn btn-primary transparent-button">
+                                                <i class="fab fa-github"></i> GitHub
+                                            </a>
+                                            <a href="mailto:jorgito.rios@hotmail.com" class="btn btn-primary transparent-button">
+                                                <i class="far fa-envelope"></i> Correo electrónico
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <p class="card-text">Buenos Aires - GBA</p>
-                                    <p class="card-text">11 3428-4790</p>
+                            </div>
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <div class="row">
+                                    <div class="card carta w-100">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Mauricio Gutierrez</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Santa Fe</p>
+                                            <p class="card-text">342 438-0832</p>
+                                            <a href="https://github.com/MauricioGut" class="btn btn-primary transparent-button">
+                                                <i class="fab fa-github"></i> GitHub
+                                            </a>
+                                            <a href="mailto:mauriciogut67@gmail.com" class="btn btn-primary transparent-button">
+                                                <i class="far fa-envelope"></i> Correo electrónico
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <div class="row">
+                                    <div class="card carta w-100">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Angela Saturnino</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Buenos Aires - GBA</p>
+                                            <p class="card-text">11 3428-4790</p>
+                                            <a href="https://github.com/username" class="btn btn-primary transparent-button">
+                                                <i class="fab fa-github"></i> GitHub
+                                            </a>
+                                            <a href="mailto:example@gmail.com" class="btn btn-primary transparent-button">
+                                                <i class="far fa-envelope"></i> Correo electrónico
+                                            </a>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-    </div>
-
-
-  
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-    <script>
-        new Vue({
-            el: '#app',
-            computed: {
-                backgroundStyle() {
-                    return {
-                        background: 'linear-gradient(to bottom, #ffcc00, #ff9900)',
-                    };
-                },
-            },
-        });
-    </script>
-
-    
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+          <p class="text-center">&copy; 2023 CODO a CODO - Grupo 14</p>
+        </div>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
