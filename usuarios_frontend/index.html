@@ -23,7 +23,7 @@
         }
 
         .neon-text {
-            color: rgb(112, 84, 47);
+            color: #fff;
             font-size: 50px;
             font-family: 'Arial', sans-serif;
             text-align: center;
@@ -32,8 +32,17 @@
             animation: neon-animation 2s ease-in-out infinite alternate, glitch-animation 0.5s infinite;
         }
 
+        .black-text {
+            color: #000;
+            font-size: 40px;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+
         @keyframes neon-animation {
-            0%, 100% {
+             0%, 100% {
                 text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffcc00, 0 0 70px #ffcc00,
                     0 0 80px #ffcc00, 0 0 100px #ffcc00, 0 0 150px #ffcc00;
             }
@@ -71,13 +80,17 @@
     <main>
         <div class="container d-flex justify-content-center align-items-center vh-100">
             <form style="width: 400px; padding: 20px;">
-                <h1 class="neon-text" >CRUD Final Codo a Codo</h1>
+                <h1 class="neon-text">Instructora</h1>
+                <h1 class="neon-text">Johana Rangel</h1>
+                <br>
+                <h2 class="black-text">Grupo 14</h2>
+                <h3 class="black-text">2023</h3>
             </form>
         </div>
     </main>
     <footer>
         <div class="container">
-          <p class="text-center">&copy; 2023 CODO a CODO - Grupo 14</p>
+            <p class="text-center">&copy; 2023 CODO a CODO - Grupo 14</p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
